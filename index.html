@@ -48,7 +48,7 @@ body.nav-open{overflow:hidden}
 .mob-nav-cta{display:block;margin-top:24px;background:var(--forest);color:var(--white);padding:16px;border-radius:100px;font-size:16px;font-weight:600;text-align:center;text-decoration:none}
 
 /* ══ HERO ══ */
-.hero{min-height:100vh;padding:110px 60px 80px;display:grid;grid-template-columns:52% 1fr;gap:56px;align-items:center;position:relative;overflow:hidden}
+.hero{min-height:100vh;padding:90px 60px 40px;display:grid;grid-template-columns:52% 1fr;gap:56px;align-items:center;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 65% at 100% 55%,rgba(26,49,40,.06) 0%,transparent 65%),radial-gradient(ellipse 30% 40% at 0% 90%,rgba(196,113,58,.07) 0%,transparent 60%)}
 
 .hl{position:relative;z-index:2}
@@ -132,7 +132,7 @@ h1 em{font-style:italic;color:var(--amber)}
 
 /* ══ FEATURES ══ */
 .feats{padding:80px 60px;background:var(--warm2);border-top:1px solid var(--warm3)}
-.feats-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px}
+.feats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .feat-card{background:var(--white);border-radius:14px;border:1px solid rgba(26,49,40,.08);padding:28px;transition:border-color .25s}
 .feat-card:hover{border-color:rgba(26,49,40,.18)}
 .feat-icon-wrap{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px}
@@ -208,7 +208,7 @@ footer{background:var(--card2);padding:24px 60px;display:flex;align-items:center
   .step{border-right:none;border-bottom:1px solid rgba(26,49,40,.08)}
   .step:last-child{border-bottom:none}
   .feats{padding:60px 24px}
-  .feats-grid{grid-template-columns:1fr}
+  .feats-grid{grid-template-columns:1fr 1fr}
   .dormant{padding:60px 24px}
   .lifecycle{gap:0}
   .lc-step{padding:0 10px}
@@ -227,6 +227,7 @@ footer{background:var(--card2);padding:24px 60px;display:flex;align-items:center
   .btnt{justify-content:center}
   .types-grid{grid-template-columns:1fr}
   .lifecycle{flex-direction:column;gap:4px}
+  .feats-grid{grid-template-columns:1fr}
   .lc-arrow{transform:rotate(90deg)}
   .dormant-title{font-size:clamp(30px,8vw,42px)}
   .cta h2{font-size:clamp(32px,8vw,44px)}
@@ -242,6 +243,7 @@ footer{background:var(--card2);padding:24px 60px;display:flex;align-items:center
     <a href="#" class="logo">Gather<span>Again</span></a>
     <div class="nl">
       <a href="#" class="nlink">Features</a>
+      <a href="#how" class="nlink">How It Works</a>
       <a href="#" class="nlink">Pricing</a>
     </div>
     <div class="nr">
@@ -258,6 +260,7 @@ footer{background:var(--card2);padding:24px 60px;display:flex;align-items:center
 <div class="mob-drawer" id="mob-drawer">
   <div class="mob-nav-links">
     <a href="#" class="mob-nav-link">Features</a>
+    <a href="#how" class="mob-nav-link">How It Works</a>
     <a href="#" class="mob-nav-link">Pricing</a>
     <a href="#" class="mob-sign">Sign in</a>
   </div>
@@ -351,6 +354,11 @@ footer{background:var(--card2);padding:24px 60px;display:flex;align-items:center
       <span class="type-emoji">🌐</span>
       <div class="type-name">Any Reunion</div>
       <p class="type-desc">Military units, religious groups, neighborhoods — any group with history worth celebrating. We've got you.</p>
+      <div class="type-ex">
+        <div class="type-ex-item">Any group, any size</div>
+        <div class="type-ex-item">Annual or multi-year cycles</div>
+        <div class="type-ex-item">Military, faith & community groups</div>
+      </div>
     </div>
   </div>
 </section>
@@ -390,18 +398,30 @@ footer{background:var(--card2);padding:24px 60px;display:flex;align-items:center
   <div class="feats-grid">
     <div class="feat-card sf">
       <div class="feat-icon-wrap fi-reg">📋</div>
-      <div class="feat-name">Registration & payments</div>
-      <p class="feat-desc">Custom forms, online payments, and automatic confirmations. Collect registration fees, meal choices, t-shirt sizes — all in one checkout.</p>
+      <div class="feat-name">Registration</div>
+      <p class="feat-desc">Custom forms, automatic confirmations, and everything you need to collect from attendees — all in one step.</p>
       <div class="feat-items">
         <div class="feat-item">Ticketed & free events</div>
         <div class="feat-item">Custom registration questions</div>
+        <div class="feat-item">Meal choices & t-shirt sizes</div>
         <div class="feat-item">Automatic email confirmations</div>
-        <div class="feat-item">Donation options at checkout</div>
       </div>
     </div>
 
     <div class="feat-card sf">
-      <div class="feat-icon-wrap fi-money">💳</div>
+      <div class="feat-icon-wrap" style="background:rgba(196,113,58,.12)">💳</div>
+      <div class="feat-name">Payments</div>
+      <p class="feat-desc">Collect registration fees online. No chasing Venmo. No spreadsheet tracking. Every payment recorded automatically.</p>
+      <div class="feat-items">
+        <div class="feat-item">Online payment processing</div>
+        <div class="feat-item">Automatic receipts</div>
+        <div class="feat-item">Payment status dashboard</div>
+        <div class="feat-item">Refund management</div>
+      </div>
+    </div>
+
+    <div class="feat-card sf">
+      <div class="feat-icon-wrap fi-money">📊</div>
       <div class="feat-name">Budgeting & finances</div>
       <p class="feat-desc">Track every dollar in and out. Scan receipts on your phone. See your event budget vs. actuals at a glance — no spreadsheet required.</p>
       <div class="feat-items">
@@ -414,20 +434,32 @@ footer{background:var(--card2);padding:24px 60px;display:flex;align-items:center
 
     <div class="feat-card sf">
       <div class="feat-icon-wrap fi-swag">👕</div>
-      <div class="feat-name">Swag shop & donations</div>
-      <p class="feat-desc">Sell reunion t-shirts, hats, and custom items with print-on-demand — no inventory, no upfront cost, shipped directly to everyone. Accept scholarship and memorial donations too.</p>
+      <div class="feat-name">Swag shop</div>
+      <p class="feat-desc">Sell reunion t-shirts, hats, and custom items with print-on-demand — no inventory, no upfront cost, shipped directly to everyone.</p>
       <div class="feat-items">
         <div class="feat-item">Print-on-demand t-shirts & merch</div>
         <div class="feat-item">Order during registration</div>
+        <div class="feat-item">Ships directly to attendees</div>
+        <div class="feat-item">No inventory to manage</div>
+      </div>
+    </div>
+
+    <div class="feat-card sf">
+      <div class="feat-icon-wrap" style="background:rgba(61,107,87,.12)">🤲</div>
+      <div class="feat-name">Donations</div>
+      <p class="feat-desc">Accept scholarship contributions, memorial donations, and event cost support — right at checkout or as a standalone fundraiser.</p>
+      <div class="feat-items">
         <div class="feat-item">Scholarship & memorial funds</div>
         <div class="feat-item">Event cost donations</div>
+        <div class="feat-item">Fundraising goal tracking</div>
+        <div class="feat-item">Donation receipts</div>
       </div>
     </div>
 
     <div class="feat-card sf">
       <div class="feat-icon-wrap fi-mem">🔁</div>
       <div class="feat-name">Reunion memory</div>
-      <p class="feat-desc">Your reunion lives on between events. When it's time to plan again — next year or five years from now — your history, attendee list, and budget are all right there.</p>
+      <p class="feat-desc">Your reunion lives on between events. When it's time to plan again — your history, attendee list, and budget are all right there.</p>
       <div class="feat-items">
         <div class="feat-item">Attendee history carried forward</div>
         <div class="feat-item">Previous budget & expenses saved</div>
